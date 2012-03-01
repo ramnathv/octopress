@@ -1,3 +1,10 @@
+## My Additions to README
+
+```sh
+git clone git://github.com/ramnathv/octopress.git octopress_test
+cd octopress_test
+bundle exec rake install
+```
 ## What is Octopress?
 
 Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
