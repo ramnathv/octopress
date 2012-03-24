@@ -3,8 +3,33 @@
 ```sh
 git clone git://github.com/ramnathv/octopress.git octopress_test
 cd octopress_test
-bundle exec rake install
+bundle install
+bundle update
+rake install['classic']
+rake generate
+rake preview
 ```
+
+## Installing Additional Themes
+
+```sh
+hub clone ramnathv/octopress [local_repo_name]
+cd [local_repo_name]
+bundle install
+bundle update
+rake install
+
+hub clone bkutil/bootstrap-theme 
+cd bootstrap-theme
+git submodule init
+git submodule update
+cd ..
+cp bootstrap-theme octopress_bootstrap/.themes/bootstrap
+rake install['bootstrap']
+rake generate
+rake preview
+```
+
 ## What is Octopress?
 
 Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
